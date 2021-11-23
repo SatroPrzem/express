@@ -1,6 +1,6 @@
 doctype html
 mixin item(title, url)
-  li
+  li(class='list-item')
     a(href=url class=path == url ? 'active' : '')=title
 
 html
@@ -11,7 +11,8 @@ html
 
     block content
 ul
-  +item('Strona główna', '/')
-  +item('Aktualności', '/news')
-  +item('Quiz', '/quiz')
-  +item('Admin', '/admin')
+  nav
+    +item('Strona główna', '/')
+    +item('Aktualności', '/news')
+    +item('Quiz', '/quiz')
+    +item('Admin', '/admin')
