@@ -1,0 +1,9 @@
+.site-logo {
+  max-height: 40px;
+}
+
+body { 
+  min-height:100vh;
+  background: rgb(47,207,123);
+background: linear-gradient(0deg, rgba(47,207,123,1) 0%, rgba(115,201,218,1) 100%);
+}

@@ -1,0 +1,8 @@
+<h1 class="mb-4">Dane dotyczące firmy: </h1>
+<% if (name) { %>
+  <h2>Nazwa firmy: <%= name %></h2>
+  <% } else { %>
+  <h2>Nie ma takiej firmy</h2>
+<% } %>
+<h2>Slug: <%= company.slug %></h2>
+<h2>Number of employees: <%= company.employeesCount %></h2> 

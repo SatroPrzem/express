@@ -1,0 +1,44 @@
+<form method="POST" >
+    <div class="mb-3">
+        <label for="" class=""form-label>Nazwa firmy</label>
+        <input type="text" 
+        name="name"
+        value="<%= form.name %> "
+        class="form-control 
+        <%- errors?.name ? 'is-invalid' : ''%> " 
+        required>
+        </input>
+        <div>Przynajmniej 4 znaki</div>
+        <% if (errors?.name) { %>
+            <div class="invalid-feedback"><%= errors.name %> </div> 
+        <% } %> 
+        </div>
+    <div class="mb-3">
+        <label for="" class=""form-label>Slug</label>
+        <input 
+        type="text" 
+        name="slug" 
+        value="<%= form.slug %> "
+        class="form-control 
+        <%- errors?.slug ? 'is-invalid' : ''%> "" 
+        required></input>
+        <% if (errors?.slug) { %>
+            <div class="invalid-feedback"><%= errors.slug %> </div> 
+        <% } %> 
+    </div>
+    <div class="mb-3">
+        <label for="" class=""form-label>Liczba pracowników</label>
+        <input 
+        type="number" 
+        name="employeesCount" 
+        value="<%= form.employeesCount %>"
+        class="form-control"></input>
+        <div></div>
+    </div>
+    <button class="btn btn-primary">Dodaj firmę</button>
+</form>
+<% if (typeof errors !== 'undefined') { %> 
+<div class="alert alert-danger mt-3" {>
+   Popraw dane w formularzu.
+</div>
+<% } %> 
